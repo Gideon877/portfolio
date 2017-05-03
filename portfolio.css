@@ -11,7 +11,7 @@ h1 {
     letter-spacing: 20px;
 }
 
-.site-header {
+.center-header {
     background-color: #22c722;
     border-bottom: solid 1px black;
     text-align: center;
@@ -20,10 +20,10 @@ h1 {
     font-size: x-large;
 }
 
-.site-footer {
+.center-body {
     text-align: center;
     border-bottom: solid 1px black;
-    background-color: grey;
+    background-color: white;
 }
 h4{
     display: inline-block;
