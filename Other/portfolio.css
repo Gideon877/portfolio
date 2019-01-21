@@ -1,0 +1,55 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lustria', serif;
+    line-height: 1;
+    margin: 0%;
+}
+
+h1 {
+    font-size: 1em;
+    margin: 0.67em 0;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+.center-header {
+    background-color: #22c722;
+    border-bottom: solid 1px black;
+    text-align: center;
+    margin-top: -3%;
+    padding-top: 1%;
+    font-size: x-large;
+}
+
+.center-body {
+    text-align: center;
+    border-bottom: solid 1px black;
+    background-color: white;
+}
+h4{
+    display: inline-block;
+}
+
+p {
+    color: black;
+    font-family: 'Playfair Display', serif;
+}
+
+p:hover {
+    background-color: green;
+}
+
+body {
+    background-color: black
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
