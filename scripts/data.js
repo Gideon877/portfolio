@@ -104,7 +104,7 @@ const projects = [
         sourceCode: "https://github.com/Gideon877/greeting",
         link: "https://gideon877.github.io/greeting/",
         year: 2017,
-        image: 'amanda.jpg'   
+        image: 'projects/greeting.jpg'   
     },
     {
         name: "registration-numbers",
@@ -114,7 +114,7 @@ const projects = [
         sourceCode: "",
         link: "https://gideon877.github.io/regNmbrs/", 
         year: 2017,
-        image: 'john.jpg'
+        image: 'projects/reg_number.png',
     },
     {
         name: "match days",
@@ -124,7 +124,7 @@ const projects = [
         sourceCode: "https://github.com/Gideon877/matchday",
         link: "https://gideon877.github.io/matchday/",
         year: 2017,
-        image: 'me.jpg'  
+        image: 'projects/date_compare.jpg'  
     },
     {
         name: "greet using routes",
@@ -134,7 +134,7 @@ const projects = [
         sourceCode: "https://github.com/Gideon877/greetings-webapp",
         link: "https://greet-8.herokuapp.com/", 
         year: 2017,
-        image: 'john.jpg'
+        image: 'projects/greet_node.jpg'
     },
     {
         name: "registration plates",
@@ -144,7 +144,7 @@ const projects = [
         sourceCode: "https://github.com/Gideon877/registration_webapp",
         link: "https://regnumbers-8.herokuapp.com/reg_numbers",
         year: 2017,
-        image: 'me.jpg'  
+        image: 'projects/reg.png',  
     },
     {
         name: "Shoe Catalogue API",
@@ -154,7 +154,7 @@ const projects = [
         sourceCode: "https://github.com/Gideon877/shoes_api",
         link: "https://shoes-8.herokuapp.com/",
         year: 2017,
-        image: 'amanda.jpg'
+        image: 'projects/shoes.jpg'
     },
     {
         name: "movie app",
@@ -164,6 +164,6 @@ const projects = [
         sourceCode: "https://github.com/Gideon877/Movie-API",
         link: "http://movie-8.herokuapp.com/",
         year: 2018,
-        image: 'viwe.jpg'   
+        image: 'video.png'   
     },
 ]
