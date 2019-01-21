@@ -56,6 +56,7 @@ const myWorkHistory = [
     {
         when: "February 2018 - Present",
         role: "Software Engineer",
+        url: "https://getwala.com/",
         company: "Wala",
         color: "teal",
         description: {
@@ -69,6 +70,7 @@ const myWorkHistory = [
     {
         when: "March 2016 - December 2016",
         role: "Volunteer Facilitator/Manager",
+        url: "http://www.avafrica.org.za/",
         company: "Action Volunteers Africa (AVA)",
         color: "green",
         description: {
@@ -80,3 +82,88 @@ const myWorkHistory = [
     }
 ]
 
+
+
+const projects = [
+
+    {
+        name: "Basic web page",
+        description: "Basic web page with info about me",
+        type: "Front-End",
+        source: "github",
+        sourceCode: "https://github.com/Gideon877/greeting",
+        link: "https://gideon877.github.io",
+        year: 2017,
+        image: 'me.jpg'
+    },
+    {
+        name: "Greet Visitor",
+        description: "this is a basic greetings web page",
+        type: "Front-End",
+        source: "github",
+        sourceCode: "https://github.com/Gideon877/greeting",
+        link: "https://gideon877.github.io/greeting/",
+        year: 2017,
+        image: 'amanda.jpg'   
+    },
+    {
+        name: "registration-numbers",
+        description: "This web page displays a registration number plate entered by the user.",
+        type: "Front-End",
+        source: "github",
+        sourceCode: "",
+        link: "https://gideon877.github.io/regNmbrs/", 
+        year: 2017,
+        image: 'john.jpg'
+    },
+    {
+        name: "match days",
+        description: "select two different dates, if the day is the same the day will be shaded",
+        type: "Front-End",
+        source: "github",
+        sourceCode: "https://github.com/Gideon877/matchday",
+        link: "https://gideon877.github.io/matchday/",
+        year: 2017,
+        image: 'me.jpg'  
+    },
+    {
+        name: "greet using routes",
+        description: "Web Application using ExpressJS with a route that allows you to greet different people using a HTTP GET route.",
+        type: "Back-End",
+        source: "github",
+        sourceCode: "https://github.com/Gideon877/greetings-webapp",
+        link: "https://greet-8.herokuapp.com/", 
+        year: 2017,
+        image: 'john.jpg'
+    },
+    {
+        name: "registration plates",
+        description: "This web app displays a registration number plate entered by the user.",
+        type: "Back-End",
+        source: "github",
+        sourceCode: "https://github.com/Gideon877/registration_webapp",
+        link: "https://regnumbers-8.herokuapp.com/reg_numbers",
+        year: 2017,
+        image: 'me.jpg'  
+    },
+    {
+        name: "Shoe Catalogue API",
+        description: "basic crud shoe api using nodejs, mongodb and expressjs",
+        type: "Front-End",
+        source: "github",
+        sourceCode: "https://github.com/Gideon877/shoes_api",
+        link: "https://shoes-8.herokuapp.com/",
+        year: 2017,
+        image: 'amanda.jpg'
+    },
+    {
+        name: "movie app",
+        description: "This is a simple web application that allow you to search for movies and add movies to a 'watch later' list.",
+        type: "Back-End",
+        source: "github",
+        sourceCode: "https://github.com/Gideon877/Movie-API",
+        link: "http://movie-8.herokuapp.com/",
+        year: 2018,
+        image: 'viwe.jpg'   
+    },
+]

@@ -1,26 +1,39 @@
 $(() => {
 
 
-    const footer = document.getElementById('footer');
-    const footerScript = document.getElementById('footerScript');
-    let footerTemplate = Handlebars.compile(footerScript.innerHTML);
-
     const workHistory = document.getElementById('work-history');
     const workScript = document.getElementById('WorkScript');
-    let workTemplate = Handlebars.compile(workScript.innerHTML);
+    const footer = document.getElementById('footer');
+    const footerScript = document.getElementById('footerScript');
 
-    let footerTag = footerTemplate({
-        data: Footer
-    });
+    const project = document.getElementById('projects');
+    const projectScript = document.getElementById('projectScript');
+    
+    if(workScript) {
+        let workTemplate = Handlebars.compile(workScript.innerHTML);
+        let workTag = workTemplate({
+            data: myWorkHistory
+        });
+        workHistory.innerHTML = workTag;
+    }
 
-    let workTag = workTemplate({
-        data: myWorkHistory
-    });
+    if(footerScript) {
+        let footerTemplate = Handlebars.compile(footerScript.innerHTML);
+        let footerTag = footerTemplate({
+            data: Footer
+        });
+        footer.innerHTML = footerTag;
+    }
 
-    workHistory.innerHTML = workTag;
-    footer.innerHTML = footerTag;
+    if(projectScript) {
+        let projectTemplate = Handlebars.compile(projectScript.innerHTML);
+        let projectTag = projectTemplate({
+            projects
+        });
+        project.innerHTML = projectTag;
+    }
 
-    console.log(Footer, '-----', myWorkHistory)
+
 
     $('.special.cards .image').dimmer({
         on: 'hover'
