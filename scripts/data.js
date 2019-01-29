@@ -25,10 +25,10 @@ const Footer = [
             //     url: 'https://www.facebook.com/gideon877',
             //     title: 'Facebook'
             // },
-            // {
-            //     url: '#',
-            //     title: 'Instagram'
-            // },
+            {
+                url: 'https://www.instagram.com/gideon877',
+                title: 'Instagram'
+            },
             {
                 url: 'https://twitter.com/gideon877',
                 title: 'Twitter'
