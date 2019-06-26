@@ -1,80 +1,99 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,
-            shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
-            integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
-            crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif"
-            rel="stylesheet">
-        <link rel="stylesheet" href="css/master.css">
-        <script src="scripts/handlebars-v4.0.11.js"></script>
         <title>Thabang | Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta http-equiv="refresh" content="5"/> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="css/semantic/semantic.js"></script>
+        <script src="scripts/handlebars-v4.0.11.js"></script>
+        <script src="scripts/data.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Crimson+Text" rel="stylesheet">
+        <link rel="stylesheet" href="css/semantic/semantic.css">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script|Cardo|Hind+Vadodara|Philosopher|Quicksand|Roboto:300" rel="stylesheet">
+        <link rel="stylesheet" href="css/master.css">
     </head>
     <body>
-
-        <div class="container-fluid">
-            <hr>
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-home-tab"
-                        data-toggle="tab" href="#nav-home" role="tab"
-                        aria-controls="nav-home" aria-selected="true">Home</a>
-                    <a class="nav-item nav-link" id="nav-project-tab"
-                        data-toggle="tab" href="#nav-project" role="tab"
-                        aria-controls="nav-project" aria-selected="false">Projects</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab"
-                        data-toggle="tab" href="#nav-contact" role="tab"
-                        aria-controls="nav-contact" aria-selected="false">Contact</a>
-                </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <br>    
-                    <div class="jumbotron">
-                        <h1 class="display-4">Thabang Gideon Magaola</h1>
-                        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                        <hr class="my-4">
-                        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                    </div>
-                    
-                    
-                
-                
-                </div>
-                <div class="tab-pane fade" id="nav-project" role="tabpanel"
-                    aria-labelledby="nav-project-tab"></div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel"
-                    aria-labelledby="nav-contact-tab">..nav-contact-tab.</div>
+        
+        <div class="ui container">
+            <!-- menu -->
+            <div class="ui icon menu">
+                <!-- <div class="disabled item"> -->
+                    <a class="disabled item">
+                        <i class="home icon"></i>
+                    </a>
+                <!-- </div> -->
+                <a class="item" href="pages/projects.html">
+                    <i class="folder icon"></i>
+                </a>
+                <a class="active right item">
+                    <i class="user icon"></i>
+                </a>
+                <!-- <a class="item">
+                    <i class="sign-out icon"></i></i> Logout
+                </a> -->
             </div>
+            <!-- end of menu -->
+
+            <!-- header -->
+
+            <h2 class="ui center aligned icon header">
+                <img src="images/me.jpg" class="ui circular image">
+            </h2>
+            <h5 class="ui horizontal divider header" style="font-family:'Philosopher', sans-serif">
+                <i class="folder open outline icon"></i>
+            </h5>
+
+            <div id="work-history"></div>
+            <br>
+            <!-- footer -->
+            <div id="footer"></div>
+
+            <script id="footerScript" type="text/x-handlebars-template">
+                <div class="ui vertical footer segment">
+                    <div class="ui container">
+                        <div class="ui stackable divided equal height stackable grid">
+                            {{#each data}}
+                            <div class="{{column}} wide column">
+                                <h4 class="ui header">{{header}}</h4>
+                                <div class="ui link list">
+                                    {{#each this.link}}
+                                    <a href="{{url}}" class="item" target="_blank">{{{title}}}</a>
+                                   {{/each}}
+
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </script>
+
+            <!-- work history -->
+            <script id="WorkScript" type="text/x-handlebars-template"> 
+                <div class="ui floating message">
+                    {{#each data}}
+                    <div class="ui header">
+                        {{role}}
+                        <h4 class="center aligned"><a href="{{url}}" target="_blank">{{company}}</a></h4>
+                    </div>
+                    <br>
+                    <a class="ui {{color}} label"> {{when}} </a>
+                    <br>
+                    
+                    {{#each description}}
+                        <p>{{this}}</p>
+                    {{/each}}
+                    <br> <hr>
+                    {{/each}}
+                </div>
+            </script>
+            
         </div>
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
-            integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
-            crossorigin="anonymous"></script>
-        
-        <script id="projects" type="text/x-handlebars-template" src="scripts/mains.html">
-            <h4>Projects</h4>
-        </script>
-        
-
         <script src="scripts/index.js"></script>
     </body>
 </html>
