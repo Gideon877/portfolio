@@ -1,14 +1,15 @@
-body {
-    font-family: 'Roboto', sans-serif;
+.container-fluid {
+    background: rgb(235, 80, 106);
+    font-family: "PT Serif", serif;
+}
 
+body {
+    background: rgb(136, 187, 19);
 }
 
 h5 {
-    font-family:'Philosopher', sans-serif;
+    font-family: "Philosopher", sans-serif;
 }
-
-
-
 
 /* 
 
@@ -20,4 +21,3 @@ font-family: 'Hind Vadodara', sans-serif;
 font-family: 'Bad Script', cursive; 
 
 */
-
